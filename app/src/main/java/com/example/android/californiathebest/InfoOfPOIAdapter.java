@@ -14,9 +14,8 @@ import java.util.ArrayList;
 
 public class InfoOfPOIAdapter extends ArrayAdapter<InfoOfPOI> {
     private int mColorResourceId;
-    public InfoOfPOIAdapter(Activity context, ArrayList<InfoOfPOI> infoOfPOI,int colorResourceId) {
+    public InfoOfPOIAdapter(Activity context, ArrayList<InfoOfPOI> infoOfPOI) {
         super(context, 0, infoOfPOI);
-        mColorResourceId = colorResourceId;
     }
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -35,10 +34,6 @@ public class InfoOfPOIAdapter extends ArrayAdapter<InfoOfPOI> {
 
         TextView poiNameTextView = (TextView) listItemView.findViewById(R.id.name_of_POI);
         poiNameTextView.setText(currentInfoOfPOI.getPOIName());
-
-        View listItem = listItemView.findViewById(R.id.list_item);
-        int color = ContextCompat.getColor(getContext(), mColorResourceId);
-        listItem.setBackgroundColor(color);
 
         return listItemView;
     }
