@@ -2,13 +2,13 @@ package com.example.android.californiathebest;
 
 public class InfoOfPOI {
     private String mPOIName;
-    private int mTitlePictureResourceId;
+    private String mUrl;
 
-    public InfoOfPOI(String poiName, int titlePictureResourceId){
+    public InfoOfPOI(String poiName, String imageURL){
         mPOIName = poiName;
-        mTitlePictureResourceId = titlePictureResourceId;
+        mUrl = imageURL;
     }
 
     public String getPOIName(){ return this.mPOIName; }
-    public int getTitlePictureResourceId(){ return this.mTitlePictureResourceId; }
+    public String getTitlePictureUrl(){ return this.mUrl; }
 }

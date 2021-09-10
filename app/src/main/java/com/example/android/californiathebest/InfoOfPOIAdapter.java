@@ -7,13 +7,10 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import androidx.core.content.ContextCompat;
-
+import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 
 public class InfoOfPOIAdapter extends ArrayAdapter<InfoOfPOI> {
-    private int mColorResourceId;
     public InfoOfPOIAdapter(Activity context, ArrayList<InfoOfPOI> infoOfPOI) {
         super(context, 0, infoOfPOI);
     }
@@ -28,9 +25,12 @@ public class InfoOfPOIAdapter extends ArrayAdapter<InfoOfPOI> {
         InfoOfPOI currentInfoOfPOI = getItem(position);
 
         ImageView titleImageView = (ImageView) listItemView.findViewById(R.id.pic_of_POI);
-        int imageResourceId = currentInfoOfPOI.getTitlePictureResourceId();
+        String imageResourceUrl = currentInfoOfPOI.getTitlePictureUrl();
         //titleImageView.setVisibility(View.VISIBLE);
-        titleImageView.setImageResource(imageResourceId);
+        //titleImageView.setImageResource(imageResourceId);
+        Picasso.get()
+                .load(imageResourceUrl)
+                .into(titleImageView);
 
         TextView poiNameTextView = (TextView) listItemView.findViewById(R.id.name_of_POI);
         poiNameTextView.setText(currentInfoOfPOI.getPOIName());
