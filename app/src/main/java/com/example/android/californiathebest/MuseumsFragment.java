@@ -29,7 +29,7 @@ public class MuseumsFragment extends Fragment {
         museums.add(new InfoOfPOI("The Hess Collection Winery & Art Museum",
                 "https://www.sftravel.com/sites/sftravel.prod.acquia-sites.com/files/parters/images/P0045093_1_20140211133712.JPG"));
         museums.add(new InfoOfPOI("California State Railroad Museum",
-                "http://www.parks.ca.gov/pages/668/images/CPHuntington_10_23_12.JPG"));
+                "https://www.visitcalifornia.com/sites/visitcalifornia.com/files/CARailroadMuseum_1280x642.jpg"));
         museums.add(new InfoOfPOI("The Getty Villa",
                 "https://media-cdn.tripadvisor.com/media/photo-s/15/aa/de/7d/at-the-getty-villa-pacific.jpg"));
         museums.add(new InfoOfPOI("Rosicrucian Egyptian Museum",

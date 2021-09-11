@@ -1,22 +1,25 @@
 package com.example.android.californiathebest;
 
+
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.fragment.app.FragmentActivity;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter{
+public class SimpleFragmentPagerAdapter extends FragmentStateAdapter {
     final int PAGE_COUNT = 4;
-    private String tabTitles[] = new String[] { "Landmarks", "National parks", "Museums", "RoadTrip" };
+//    private String fragmentTitles[] = new String[] { "Landmarks", "National parks", "Museums", "RoadTrip" };
 
-    public SimpleFragmentPagerAdapter(FragmentManager fragmentManager) {
-        super(fragmentManager,BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+    public SimpleFragmentPagerAdapter(@NonNull FragmentActivity fragmentActivity){
+        super(fragmentActivity);
     }
 
     @Override
-    public int getCount() { return PAGE_COUNT; }
+    public int getItemCount() { return PAGE_COUNT; }
 
+    @NonNull
     @Override
-    public Fragment getItem(int position) {
+    public Fragment createFragment(int position) {
         if (position == 0) {
             return new LandmarksFragment();
         } else if (position == 1) {
@@ -27,9 +30,5 @@ public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter{
             return new RoadTripFragment();
         }
     }
-    @Override
-    public CharSequence getPageTitle(int position) {
-        // Generate title based on item position
-        return tabTitles[position];
-    }
+
 }

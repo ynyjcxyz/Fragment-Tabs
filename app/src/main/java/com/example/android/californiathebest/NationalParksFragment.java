@@ -37,7 +37,7 @@ public class NationalParksFragment extends Fragment {
         nationalParks.add(new InfoOfPOI("Lassen Volcanic National Park",
                 "https://www.visitcalifornia.com/sites/visitcalifornia.com/files/vc_spotlight_lassenvolcanicnationalpark_st_rf_112719648_1280x640.jpg"));
         nationalParks.add(new InfoOfPOI("Channel Islands National Park",
-                "https://visitoxnard.com/imager/s3_us-west-1_amazonaws_com/oxnard-2020/images/Channel-Islands-National-Park-Oxnard_PC-Benjamin-AdobeStock_167145759_e7f018298c4a7f7ebc2c8dcb801d1c37.jpeg"));
+                "https://www.adventurousway.com/images/i/58l9tl9ff5c7/1200w/national-parks/channel-islands-national-park/channel-islands-national-park.jpeg"));
         nationalParks.add(new InfoOfPOI("Point Reyes National Seashore",
                 "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Chimney_Rock_Trail_Point_Reyes_December_2016_panorama_1.jpg/1200px-Chimney_Rock_Trail_Point_Reyes_December_2016_panorama_1.jpg"));
         nationalParks.add(new InfoOfPOI("Devils Postpile National Monument",
