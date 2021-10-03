@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context="com.example.android.californiathebest.MainActivity"
-    tools:ignore="MissingClass">
+    tools:ignore="ExtraText,MissingClass">
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewpager"
@@ -22,6 +22,6 @@
         app:tabMaxWidth="0dp"
         app:tabGravity="fill"
         app:tabMode="fixed">
-    </com.google.android.material.tabs.TabLayout>>
+    </com.google.android.material.tabs.TabLayout>
 
 </LinearLayout>

@@ -1,9 +1,12 @@
 package com.example.android.californiathebest;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import androidx.fragment.app.Fragment;
@@ -55,6 +58,55 @@ public class MuseumsFragment extends Fragment {
         InfoOfPOIAdapter itemsAdapter = new InfoOfPOIAdapter(getActivity(),museums);
         ListView listView = (ListView) rootView.findViewById(R.id.list);
         listView.setAdapter(itemsAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                WebViewUrl webUrl = new WebViewUrl();
+                switch (position) {
+                    case 0:
+                        Intent intent0 = new Intent(Intent.ACTION_VIEW, Uri.parse(webUrl.getWebViewUrl(2, 0)));
+                        startActivity(intent0);
+                        break;
+                    case 1:
+                        Intent intent1 = new Intent(Intent.ACTION_VIEW, Uri.parse(webUrl.getWebViewUrl(2, 1)));
+                        startActivity(intent1);
+                        break;
+                    case 2:
+                        Intent intent2 = new Intent(Intent.ACTION_VIEW, Uri.parse(webUrl.getWebViewUrl(2, 2)));
+                        startActivity(intent2);
+                        break;
+                    case 3:
+                        Intent intent3 = new Intent(Intent.ACTION_VIEW, Uri.parse(webUrl.getWebViewUrl(2, 3)));
+                        startActivity(intent3);
+                        break;
+                    case 4:
+                        Intent intent4 = new Intent(Intent.ACTION_VIEW, Uri.parse(webUrl.getWebViewUrl(2, 4)));
+                        startActivity(intent4);
+                        break;
+                    case 5:
+                        Intent intent5 = new Intent(Intent.ACTION_VIEW, Uri.parse(webUrl.getWebViewUrl(2, 5)));
+                        startActivity(intent5);
+                        break;
+                    case 6:
+                        Intent intent6 = new Intent(Intent.ACTION_VIEW, Uri.parse(webUrl.getWebViewUrl(2, 6)));
+                        startActivity(intent6);
+                        break;
+                    case 7:
+                        Intent intent7 = new Intent(Intent.ACTION_VIEW, Uri.parse(webUrl.getWebViewUrl(2, 7)));
+                        startActivity(intent7);
+                        break;
+                    case 8:
+                        Intent intent8 = new Intent(Intent.ACTION_VIEW, Uri.parse(webUrl.getWebViewUrl(2, 8)));
+                        startActivity(intent8);
+                        break;
+                    case 9:
+                        Intent intent9 = new Intent(Intent.ACTION_VIEW, Uri.parse(webUrl.getWebViewUrl(2, 9)));
+                        startActivity(intent9);
+                        break;
+                }
+            }
+        });
 
         return rootView;
     }
